@@ -9,4 +9,3 @@ Restaurant.create(name: "Gran Gusto", nationality: "Italian", rating: 7, avatar:
 Restaurant.create(name: "Puerto Sagua", nationality: "Cuban", rating: 9, avatar: "https://travel.home.sndimg.com/content/dam/images/travel/fullrights/2018/10/26/0/CI_Havana-1957_Miami-best-cuban-restaurants-4.jpg.rend.hgtvcom.1280.853.suffix/1540566302040.jpeg" , city: miami)
 Restaurant.create(name: "Guelaguetza Restaurant", nationality: "Mexican", rating: 7, avatar: "https://d1ralsognjng37.cloudfront.net/129512af-eb33-4b5b-a4a9-58fa772002a1" , city: losangeles)
 Restaurant.create(name: "Xelaju", nationality: "Guatemalan", rating: 8, avatar: "https://duyt4h9nfnj50.cloudfront.net/resized/d8d07154a52cc81df050ca959993cff1-w2880-7f.jpg" , city: nyc)
-
