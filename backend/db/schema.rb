@@ -48,9 +48,9 @@ ActiveRecord::Schema.define(version: 2021_08_05_013512) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
-    t.string "review"
-    t.integer "star"
-    t.float "price"
+    t.string "nationality"
+    t.integer "rating"
+    t.string "avatar"
     t.integer "city_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
