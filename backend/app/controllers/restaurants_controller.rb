@@ -7,24 +7,33 @@ class RestaurantsController < ApplicationController
 
     def show
         restaurant = Restaurant.find(params[:id])
-        # need to render json here
+        render json: restaurant
     end
 
     def create
         restaurant = Restaurant.new(restaurant_params)
 
         if restaurant.save
-            #render json
+            render json: restaurant
         else
-            #render json
+            render json: restaurant.errors
         end
         
+    end
+
+    def update
+        restaurant = Restaurant.find(params[:id])
+        if restaurant.update(restaurant_params)
+            render json: restaurant
+        else
+            render json: restaurant.errors
+        end
     end
 
     def destroy
         restaurant = Restaurant.find(params[:id])
         restaurant.destroy
-        # need to render json here
+        render json: {message: "Successfully Deleted #{restaurant.name}"}
     end
 
     private
