@@ -1,8 +1,8 @@
 class CitiesController < ApplicationController
 
     def index 
-        cities = City.all
-        #need to render json here
+        cities = City.includes(:restaurants)
+        render json: cities
     end
 
 end

@@ -1,4 +1,6 @@
 class RestaurantsController < ApplicationController
+    
+    before_action :made_restaurant, only: [:show, :update, :destroy]
 
     def index
         restaurants = Restaurant.all
@@ -6,7 +8,6 @@ class RestaurantsController < ApplicationController
     end
 
     def show
-        restaurant = Restaurant.find(params[:id])
         render json: restaurant
     end
 
@@ -22,7 +23,6 @@ class RestaurantsController < ApplicationController
     end
 
     def update
-        restaurant = Restaurant.find(params[:id])
         if restaurant.update(restaurant_params)
             render json: restaurant
         else
@@ -31,12 +31,15 @@ class RestaurantsController < ApplicationController
     end
 
     def destroy
-        restaurant = Restaurant.find(params[:id])
         restaurant.destroy
         render json: {message: "Successfully Deleted #{restaurant.name}"}
     end
 
     private
+
+    def made_restaurant
+        restaurant = Restaurant.find(params[:id])
+    end
 
     def restaurant_params
         params.require(:restaurant).permit(:name, :review, :star, :price)
