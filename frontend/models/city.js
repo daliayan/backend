@@ -1,7 +1,6 @@
 RENDERING - LOGIC - FILTERING 
 
 class City {
-    static url = `${baseURL}/cities`
     static all = []
 
     constructor({name, id, restaurants = []}){
@@ -13,10 +12,6 @@ class City {
          // New elements to add to the array.
         // Appends new elements to the end of an array, and returns the new length of the array.
     }
-
-
-
-
 
 
 }
