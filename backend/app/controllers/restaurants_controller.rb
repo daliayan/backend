@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
     
-    before_action :made_restaurant, only: [:show, :update, :destroy]
+    before_action :made_restaurant, only: [:show, :destroy] #:update,
 
     def index
         restaurants = Restaurant.all
@@ -11,8 +11,10 @@ class RestaurantsController < ApplicationController
         render json: restaurant
     end
 
+    #Not new because I'm not working with views
+
     def create
-        restaurant = Restaurant.new(restaurant_params)
+        restaurant = Restaurant.create(restaurant_params)
 
         if restaurant.save
             render json: restaurant
@@ -22,13 +24,13 @@ class RestaurantsController < ApplicationController
         
     end
 
-    def update
-        if restaurant.update(restaurant_params)
-            render json: restaurant
-        else
-            render json: restaurant.errors
-        end
-    end
+    # def update
+    #     if restaurant.update(restaurant_params)
+    #         render json: restaurant
+    #     else
+    #         render json: restaurant.errors
+    #     end
+    # end
 
     def destroy
         restaurant.destroy
