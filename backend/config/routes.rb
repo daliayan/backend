@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  resources :cities
-  resources :restaurants
+  resources :cities, only: [:index, :show]
+  resources :restaurants, except: [:update]
 
 end
