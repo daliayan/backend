@@ -3,16 +3,13 @@ class CityApi {
     static url = `${baseURL}/cities`
 
     getCities(){
-        fetch(this.url)
+        fetch(this.baseURL)
         .then(resp => resp.json())
         .then(json => { json.forEach(cityObj => {
             let cit = City.findOrCreateBy(cityObj)
+            cit.addToDropDown()
         })
-
         })
     }
-    // fetch requests of API from Rails backend
-    // .then (resp => resp.json())
-    // . then
 
 }
