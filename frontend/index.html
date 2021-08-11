@@ -2,31 +2,26 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
          <title>Taste This City</title>
-         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
   <body>
-    
+    <main>
+      <h1 id="welcome"> Taste This City </h1>
 
-    <div class="horizontal-bar">
-      <div class="horizontal-styling" style="max-width:1200px;margin:auto">
-        <div class="w3-center w3-padding-16">Taste This City</div>
-      </div>
-    </div>
-
-    <h1> Here are all the cities </h1>
-      <div id="city-list"> 
-        
-      </div>
+      <article id="city-container">
+        <h1> Cities</h1>
+          <section id="city-list"> 
+          </section>
+      </article>
 
 
-
-
+    </main>
+    <script src="services/CityApi.js" type="text/javascript"></script>
     <script src="models/city.js" type="text/javascript"></script>
+    <script src="services/RestaurantApi.js" type="text/javascript"></script>
     <script src="models/restaurant.js" type="text/javascript"></script>
-    <script src="services/cityApi.js" type="text/javascript"></script>
-    <script src="services/restaurantApi.js" type="text/javascript"></script>
     <script src="index.js" type="text/javascript"></script>
   </body>
 

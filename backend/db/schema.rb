@@ -42,8 +42,6 @@ ActiveRecord::Schema.define(version: 2021_08_05_013512) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "restaurants", force: :cascade do |t|
@@ -52,8 +50,6 @@ ActiveRecord::Schema.define(version: 2021_08_05_013512) do
     t.integer "rating"
     t.string "avatar"
     t.integer "city_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.index ["city_id"], name: "index_restaurants_on_city_id"
   end
 

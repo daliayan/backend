@@ -6,8 +6,6 @@ class CreateRestaurants < ActiveRecord::Migration[6.1]
             t.integer :rating
             t.string :avatar
             t.belongs_to :city, null: false, foreign_key: true
-
-            t.timestamps
         end
     end
 end
