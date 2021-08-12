@@ -6,6 +6,10 @@ html {
     min-height: 100%;
 }
 
+body {
+    padding: 0rem 1rem;
+  }
+
 #header{
 	height:100px;
 	background-color:#f3eabc;

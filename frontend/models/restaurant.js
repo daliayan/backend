@@ -1,4 +1,4 @@
-RENDERING - LOGIC - FILTERING 
+// RENDERING - LOGIC - FILTERING 
 
 class Restaurant {
     static all = []
