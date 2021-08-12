@@ -15,4 +15,8 @@ class Restaurant {
         // Appends new elements to the end of an array, and returns the new length of the array.
     }
 
+    static findByName(name){
+        return this.all.find(function(restaurant) {restaurant.name === name})
+    }
+
 }
