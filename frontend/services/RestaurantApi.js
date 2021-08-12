@@ -16,4 +16,15 @@ class RestaurantApi {
     // fetch requests of API from Rails backend
     // .then (resp => resp.json())
     // . then
-}
+
+
+    deleteRestaurant(id){
+        const config = {
+            method: 'DELETE'  
+        };
+
+        fetch(`${this.baseURL}/${id}`, config)
+        .then(resp => resp.json())
+        .then(info => console.log(info.message))
+    };
+};

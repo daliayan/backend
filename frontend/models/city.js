@@ -22,9 +22,11 @@ class City {
         // cityName.innerText = this.name;
 
         const cityInfo = this.renderCityInfo();
+        const restaurants = this.renderCityRestaurants;
 
         cityDiv.appendChild(cityInfo);
-        cityList.appendChild(cityDiv);
+        cityList.appendChild(restaurants);
+        City.container.appendChild(cityList);
 
     };
 
@@ -37,5 +39,17 @@ class City {
         `; 
         return cityData;
     }
+
+    renderCityRestaurants(){
+        const restaurantUl = document.createElement('li');
+        restaurantUl.classList.add('restaurants');
+
+        this.restaurants.forEach(restaurant => {
+            const newRestaurant = new Restaurant(this.restaurant);
+            const li = newRestaurant.getRestaurant();
+            restaurantUl.appendChild(li);
+        });
+        return restaurantUl;
+    };
 
 };
