@@ -1,4 +1,5 @@
 // RENDERING - LOGIC - FILTERING 
+const RestaurantApi = new RestaurantApi('http://localhost:3000/restaurants');
 
 class Restaurant {
     static all = []
@@ -24,7 +25,8 @@ class Restaurant {
         deleteRes.innerText = 'x';
 
         deleteRes.addEventListener('click', () => {
-            console.log(this, 'Selected!');
+            RestaurantApi.deleteRes(this.id);
+            li.remove();
         });
 
         li.appendChild(deleteRes);
