@@ -52,4 +52,8 @@ class City {
         return restaurantUl;
     };
 
+    renderRestaurantForm(){
+
+    };
+
 };
